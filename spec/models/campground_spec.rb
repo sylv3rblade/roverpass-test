@@ -17,6 +17,8 @@ RSpec.describe Campground, type: :model do
       # * name: ["can't be blank"]
       # * public_park: ["can't be blank"]
       # it { is_expected.to validate_inclusion_of(:public_park).in_array([true, false]) }
+      it { is_expected.to belong_to(:city) }
+      it { is_expected.to validate_presence_of(:city) }
     end
   end
 end
