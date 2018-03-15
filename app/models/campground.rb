@@ -5,4 +5,8 @@ class Campground < ApplicationRecord
   validates :city, presence: true
   validates :cost_per_night, presence: true, numericality: true
   validates :public_park, inclusion: { in: [true, false] }
+
+  def city_name
+    city.name
+  end
 end
