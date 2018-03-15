@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Roverpass</title>
     <%= csrf_meta_tags %>
@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

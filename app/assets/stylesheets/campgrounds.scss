@@ -1,0 +1,51 @@
+.campgrounds{
+  .card {
+    width: calc(25% - 25px);
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    display: inline-block;
+    margin: 20px 10px;
+    .card-title{
+      padding: 1em;
+    }
+
+    .card-block {
+      font-size: 1em;
+      position: relative;
+      margin: 0;
+      padding: 1em;
+      border: none;
+      border-top: 1px solid rgba(34, 36, 38, .1);
+      box-shadow: none;
+    }
+    h4, h5{display: inline-block;}
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .campgrounds {
+    .card{
+      width: calc(33% - 20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .campgrounds {
+    .card{
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .campgrounds {
+    .card{
+      width: calc(100% - 20px);
+    }
+  }
+}

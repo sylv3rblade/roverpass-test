@@ -1,0 +1,16 @@
+.campground.card
+  .card-title
+    %h4= link_to campground.name, campground
+  .card-block
+    %div
+      City:
+      %h4
+        #{campground.city_name}
+    %div
+      Cost per Night:
+      %h5
+        - if campground.public_park?
+          Public Park
+        - else
+          $ #{campground.cost_per_night}
+
