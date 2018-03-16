@@ -1,4 +1,11 @@
 .campgrounds{
+  .header{
+    h3{ display: inline-block }
+    .btn {
+      float: right;
+      margin: 20px;
+    }
+  }
   .card {
     width: calc(25% - 25px);
     font-size: 1em;

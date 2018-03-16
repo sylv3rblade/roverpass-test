@@ -1,5 +1,7 @@
 %div
   .campgrounds.container
-    %h3 Campgrounds
+    .header
+      %h3 Campgrounds
+      = link_to 'Create New', new_campground_path, class: 'btn btn-primary'
     .list
       = render @campgrounds
