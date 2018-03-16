@@ -1,27 +1,27 @@
 .campground-form
   %h3 New Campground
-  = form_for @campground, html: { class: 'form-horizontal' } do |f|
-    .control-group
+  = form_for @campground, html: { class: 'form-horizontal', 'data-toggle': 'validator', role: 'form' } do |f|
+    .form-group.control-group
       %label.control-label Name
       .controls
-        = f.text_field :name, class: 'form-control'
-    .control-group
+        = f.text_field :name, class: 'form-control', required: true
+    .form-group.control-group
       %label.control-label City
       .controls
-        = f.select :city_id, options_from_collection_for_select(City.default_query, :id, :name), {}, class: 'form-control'
-    .control-group
+        = f.select :city_id, options_from_collection_for_select(City.default_query, :id, :name), {prompt: true}, class: 'form-control', required: true
+    .form-group.control-group
       %label.control-label Public Park
       .controls
         True
-        = f.radio_button :public_park, true
+        = f.radio_button :public_park, true, required: true, class: 'public-park-selector'
         False
-        = f.radio_button :public_park, false
+        = f.radio_button :public_park, false, required: true, class: 'public-park-selector'
         
-    .control-group
+    .form-group.control-group
       %label.control-label Cost Per Night
       .controls
-        = f.text_field :cost_per_night, class: 'form-control'
-    .control-group
+        = f.text_field :cost_per_night, class: 'form-control cost-per-night', disabled: true
+    .form-group.control-group
       .controls
         %button.btn{type: 'submit'}
           Submit
